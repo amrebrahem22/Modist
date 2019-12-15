@@ -38,11 +38,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # AllAuth
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
 
+    # Django Countries
+    'django_countries',
+
+    # stripe
+    'stripe',
+
+    # My apps
     'categories',
     'products',
     'addresses',
@@ -142,3 +150,5 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
+
+STRIPE_SECRET_KEY = "sk_test_eMPykiD7WnJiIZU9T3ag080E006btNSqyj"

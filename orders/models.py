@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from products.models import Product
+from addresses.models import Address, Payment
 
 User = settings.AUTH_USER_MODEL
 
@@ -9,7 +10,6 @@ class OrderItem(models.Model):
     item = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
     ordered = models.BooleanField(default=False)
-    
 
     def __str__(self):
         return f"{self.quantity} of {self.item.title}"
@@ -39,6 +39,11 @@ class Order(models.Model):
     ordered = models.BooleanField(default=False)
     start_date = models.DateTimeField(auto_now_add=True)
     order_date = models.DateTimeField()
+    shipping_address = models.ForeignKey(Address, related_name="ShippingAddress", on_delete=models.SET_NULL, blank=True, null=True)
+    billing_address = models.ForeignKey(Address, related_name="BillingAddress", on_delete=models.SET_NULL, blank=True, null=True)
+    payment         = models.ForeignKey(Payment, on_delete=models.SET_NULL, blank=True, null=True)
+    coupon         = models.ForeignKey('Coupon', on_delete=models.SET_NULL, blank=True, null=True)
+
 
     def __str__(self):
         return self.user.username
@@ -48,5 +53,14 @@ class Order(models.Model):
         total = 0
         for item in self.items.all():
             total += item.get_final_price()
+        if self.coupon:
+            total -= int(self.coupon.amount)
         return total
 
+
+class Coupon(models.Model):
+    code    = models.CharField(max_length=15)
+    amount  = models.FloatField()
+
+    def __str__(self):
+        return self.code

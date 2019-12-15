@@ -81,8 +81,25 @@
     						<span>Total</span>
     						<span>${{object.get_total}}</span>
     					</p>
+					</div>
+					{% if DISPLAY_COUPON_FORM %}
+    				<div class="cart-total mb-3">
+    					<h3>Coupon Code</h3>
+    					<p class="d-flex total-price">
+							
+							<form class="card p-2" action="{% url 'cart:addCoupon' %}" method="POST">
+								{% csrf_token %}
+								<div class="input-group">
+									{{ couponform.code }}
+									<div class="input-group-append">
+									<button class="btn btn-primary py-3 px-4" style='color: rgb(117, 108, 108) !important; font-weight: bold;' type="submit">Redeem</button>
+									</div>
+								</div>
+							</form>
+    					</p>
     				</div>
-    				<p class="text-center"><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+					{% endif %}
+    				<p class="text-center"><a href="{% url 'checkout:index' %}" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
 				</div>
 				
     		</div>
