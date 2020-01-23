@@ -1,25 +1,13 @@
 {% load static %}
 
 <meta charset="utf-8" />
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no"
-/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<link
-    href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-    rel="stylesheet"
-/>
-<link
-    href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700"
-    rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet" />
 
 <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
-<link
-    rel="stylesheet"
-    href="{% static 'css/open-iconic-bootstrap.min.css' %}"
-/>
+<link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}" />
 <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
 <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" />
 <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
@@ -30,3 +18,19 @@
 <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" />
 <link rel="stylesheet" href="{% static 'css/icomoon.css' %}" />
 <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.8.0/marked.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.markdown-content').each(function () {
+            var mContent = $(this).text();
+            var replaceMarkdown = marked(mContent);
+            $(this).html(replaceMarkdown);
+        });
+
+        $(".post-detail-item img").each(function () {
+            $(this).addClass("img-responsive");
+        })
+    });
+</script>

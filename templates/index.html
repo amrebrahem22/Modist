@@ -34,16 +34,26 @@
     		<div class="row">
     			<div class="col-md-12">
     				<div class="product-slider owl-carousel ftco-animate">
+						{% for item in trending %}
     					<div class="item">
 		    				<div class="product">
-		    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-1.jpg' %}" alt="Colorlib Template">
-		    						<span class="status">30%</span>
+		    					<a href="{{item.get_absolute_url}}" class="img-prod"><img class="img-fluid" src="{{item.image.url}}" alt="Colorlib Template">
+		    						{% if product.discount_price %}
+								<span class="status">{{product.get_descount_prec}}%</span>
+								{% endif %}
 		    					</a>
 		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
+		    						<h3><a href="{{item.get_absolute_url}}">{{item.title|title}}</a></h3>
 		    						<div class="d-flex">
 		    							<div class="pricing">
-			    							<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+											<p class="price">
+												{% if item.discount_price %}
+												<span class="mr-2 price-dc">${{item.price}}</span>
+												<span class="price-sale">${{item.discount_price}}</span>
+												{% else %}
+												<span class="mr-2 price-sale">${{item.price}}</span>
+												{% endif %}
+											</p>
 			    						</div>
 			    						<div class="rating">
 			    							<p class="text-right">
@@ -57,119 +67,8 @@
 		    						</div>
 		    					</div>
 		    				</div>
-	    				</div>
-	    				<div class="item">
-		    				<div class="product">
-		    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-2.jpg' %}" alt="Colorlib Template"></a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-				    						<p class="price"><span>$120.00</span></p>
-				    					</div>
-				    					<div class="rating">
-			    							<p class="text-right">
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    							</p>
-			    						</div>
-			    					</div>
-		    					</div>
-		    				</div>
-	    				</div>
-	    				<div class="item">
-		    				<div class="product">
-		    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-3.jpg' %}" alt="Colorlib Template"></a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-				    						<p class="price"><span>$120.00</span></p>
-				    					</div>
-				    					<div class="rating">
-			    							<p class="text-right">
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    							</p>
-			    						</div>
-			    					</div>
-		    					</div>
-		    				</div>
-	    				</div>
-	    				<div class="item">
-		    				<div class="product">
-		    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-4.jpg' %}" alt="Colorlib Template"></a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-				    						<p class="price"><span>$120.00</span></p>
-				    					</div>
-				    					<div class="rating">
-			    							<p class="text-right">
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    							</p>
-			    						</div>
-			    					</div>
-		    					</div>
-		    				</div>
-	    				</div>
-	    				<div class="item">
-		    				<div class="product">
-		    					<a href="#" class="img-prod"><img src="{% static 'images/product-5.jpg' %}" alt="Colorlib Template">
-			    					<span class="status">30%</span>
-			    				</a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-			    							<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
-			    						</div>
-			    						<div class="rating">
-			    							<p class="text-right">
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    							</p>
-			    						</div>
-		    						</div>
-		    					</div>
-		    				</div>
-	    				</div>
-	    				<div class="item">
-		    				<div class="product">
-		    					<a href="#" class="img-prod"><img src="{% static 'images/product-6.jpg' %}" alt="Colorlib Template"></a>
-		    					<div class="text pt-3 px-3">
-		    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-		    						<div class="d-flex">
-		    							<div class="pricing">
-				    						<p class="price"><span>$120.00</span></p>
-				    					</div>
-				    					<div class="rating">
-			    							<p class="text-right">
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    								<span class="ion-ios-star-outline"></span>
-			    							</p>
-			    						</div>
-			    					</div>
-		    					</div>
-		    				</div>
-	    				</div>
+						</div>
+						{% endfor %}
     				</div>
     			</div>
     		</div>
@@ -210,114 +109,41 @@
     	</div>
     	<div class="container-fluid">
     		<div class="row">
+				{% for item in most_viewed %}
     			<div class="col-sm col-md-6 col-lg ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-1.jpg' %}" alt="Colorlib Template"></a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price"><span>$120.00</span></p>
-		    					</div>
-		    					<div class="rating">
-	    							<p class="text-right">
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    							</p>
-	    						</div>
-	    					</div>
-	    					<hr>
-    						<p class="bottom-area d-flex">
-    							<a href="#" class="add-to-cart"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="ml-auto"><span><i class="ion-ios-heart-empty"></i></span></a>
-    						</p>
-    					</div>
+    					<a href="{{item.get_absolute_url}}" class="img-prod"><img class="img-fluid" src="{{item.image.url}}" alt="Colorlib Template">
+							{% if product.discount_price %}
+						<span class="status">{{product.get_descount_prec}}%</span>
+						{% endif %}
+						</a>
+						<div class="text pt-3 px-3">
+							<h3><a href="{{item.get_absolute_url}}">{{item.title|title}}</a></h3>
+							<div class="d-flex">
+								<div class="pricing">
+									<p class="price">
+										{% if item.discount_price %}
+										<span class="mr-2 price-dc">${{item.price}}</span>
+										<span class="price-sale">${{item.discount_price}}</span>
+										{% else %}
+										<span class="mr-2 price-sale">${{item.price}}</span>
+										{% endif %}
+									</p>
+								</div>
+								<div class="rating">
+									<p class="text-right">
+										<span class="ion-ios-star-outline"></span>
+										<span class="ion-ios-star-outline"></span>
+										<span class="ion-ios-star-outline"></span>
+										<span class="ion-ios-star-outline"></span>
+										<span class="ion-ios-star-outline"></span>
+									</p>
+								</div>
+							</div>
+						</div>
     				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-2.jpg' %}" alt="Colorlib Template"></a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price"><span>$120.00</span></p>
-		    					</div>
-		    					<div class="rating">
-	    							<p class="text-right">
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    							</p>
-	    						</div>
-	    					</div>
-	    					<hr>
-    						<p class="bottom-area d-flex">
-    							<a href="#" class="add-to-cart"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="ml-auto"><span><i class="ion-ios-heart-empty"></i></span></a>
-    						</p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-3.jpg' %}" alt="Colorlib Template"></a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price"><span>$120.00</span></p>
-		    					</div>
-		    					<div class="rating">
-	    							<p class="text-right">
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    							</p>
-	    						</div>
-	    					</div>
-	    					<hr>
-    						<p class="bottom-area d-flex">
-    							<a href="#" class="add-to-cart"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="ml-auto"><span><i class="ion-ios-heart-empty"></i></span></a>
-    						</p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-4.jpg' %}" alt="Colorlib Template"></a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">Young Woman Wearing Dress</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price"><span>$120.00</span></p>
-		    					</div>
-		    					<div class="rating">
-	    							<p class="text-right">
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    								<span class="ion-ios-star-outline"></span>
-	    							</p>
-	    						</div>
-	    					</div>
-	    					<hr>
-    						<p class="bottom-area d-flex">
-    							<a href="#" class="add-to-cart"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="ml-auto"><span><i class="ion-ios-heart-empty"></i></span></a>
-    						</p>
-    					</div>
-    				</div>
-    			</div>
+				</div>
+				{% endfor %}
     		</div>
     	</div>
     </section>
@@ -432,48 +258,22 @@
           </div>
         </div>
         <div class="row d-flex">
+		{% for post in posts %}
           <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('static/images/image_1.jpg');">
+              <a href="{{post.get_absolute_url}}" class="block-20" style="background-image: url('{{post.image.url}}');">
               </a>
               <div class="text mt-3 d-block">
-                <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading mt-3"><a href="{{post.get_absolute_url}}">{{post.title|title}}</a></h3>
+				<p>{{post.overview}}</p>
                 <div class="meta mb-3">
-                  <div><a href="#">Dec 6, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                  <div><a href="#">{{post.timestamp|timesince}}</a></div>
+                  <div><a href="#">{{post.author.get_full_name}}</a></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('static/images/image_2.jpg');">
-              </a>
-              <div class="text mt-3">
-                <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                <div class="meta mb-3">
-                  <div><a href="#">Dec 6, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('static/images/image_3.jpg');">
-              </a>
-              <div class="text mt-3">
-                <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                <div class="meta mb-3">
-                  <div><a href="#">Dec 6, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
+		  {% endfor %}
         </div>
       </div>
     </section>
@@ -576,12 +376,13 @@
               <h2>Subcribe to our Newsletter</h2>
               <div class="row d-flex justify-content-center mt-5">
                 <div class="col-md-8">
-                  <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Enter email address">
-                      <input type="submit" value="Subscribe" class="submit px-3">
-                    </div>
-                  </form>
+					<form action="{% url 'index' %}" method="POST" class="subscribe-form">
+						{% csrf_token %}
+						<div class="form-group d-flex">
+						  <input type="text" name="email_subscription" class="form-control" placeholder="Enter email address">
+						  <input type="submit" value="Subscribe" class="submit px-3">
+						</div>
+					  </form>
                 </div>
               </div>
             </div>

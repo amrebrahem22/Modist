@@ -32,6 +32,8 @@ class Product(models.Model):
     category = models.ManyToManyField(Category)
     sizes = models.ManyToManyField(ProductSizes)
     rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)], null=True, blank=True)
+    views = models.IntegerField(default=0)
+    purchasing = models.IntegerField(default=0)
 
     def __str__(self):
         return self.title

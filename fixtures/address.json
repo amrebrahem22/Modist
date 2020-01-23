@@ -1,0 +1,212 @@
+[
+{
+    "model": "addresses.address",
+    "pk": 11,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "B",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 12,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 13,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 14,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 15,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 16,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 17,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 18,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 19,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 20,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 21,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 22,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 23,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+},
+{
+    "model": "addresses.address",
+    "pk": 24,
+    "fields": {
+        "user": 1,
+        "country": "EG",
+        "street_address": "Edwa",
+        "appartment": "mg 132",
+        "city": "cairo",
+        "zip": "1538522",
+        "phone": "+10595039",
+        "address_type": "S",
+        "default": true
+    }
+}
+]

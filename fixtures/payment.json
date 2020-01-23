@@ -1,0 +1,52 @@
+[
+{
+    "model": "addresses.payment",
+    "pk": 1,
+    "fields": {
+        "stripe_charge_id": "ch_1FplurKQDjHOPyt26GMtcddu",
+        "user": 1,
+        "amount": 660.0,
+        "timestamp": "2019-12-15T01:29:01.652Z"
+    }
+},
+{
+    "model": "addresses.payment",
+    "pk": 2,
+    "fields": {
+        "stripe_charge_id": "ch_1Fpm5hKQDjHOPyt29ZeEtjYQ",
+        "user": 1,
+        "amount": 240.0,
+        "timestamp": "2019-12-15T01:40:13.314Z"
+    }
+},
+{
+    "model": "addresses.payment",
+    "pk": 3,
+    "fields": {
+        "stripe_charge_id": "ch_1FpoZRKQDjHOPyt21qknIhgV",
+        "user": 1,
+        "amount": 100.0,
+        "timestamp": "2019-12-15T04:19:05.688Z"
+    }
+},
+{
+    "model": "addresses.payment",
+    "pk": 4,
+    "fields": {
+        "stripe_charge_id": "ch_1Fq5RUKQDjHOPyt2fzD71hju",
+        "user": 1,
+        "amount": 60.0,
+        "timestamp": "2019-12-15T22:20:01.525Z"
+    }
+},
+{
+    "model": "addresses.payment",
+    "pk": 5,
+    "fields": {
+        "stripe_charge_id": "ch_1Fq5ZFKQDjHOPyt2SEiEMSPi",
+        "user": 1,
+        "amount": 100.0,
+        "timestamp": "2019-12-15T22:28:02.827Z"
+    }
+}
+]

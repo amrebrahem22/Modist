@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Profile {% endblock %}
+
+{% block body %}
+
+<style>
+    .profile-card {
+        width: 100%;
+        padding: 50px;
+        background: #795548;
+        color: #fff;
+        text-align: center;
+    }
+    .profile-card .avatar {
+        border-radius: 50%;
+        width: 300px;
+    }
+    .profile-card h1 {
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .profile-card span {
+        color: #ccc;
+        font-style: italic;
+    }
+    .profile-card p {
+        color: #ccc;
+        font-style: italic;
+    }
+</style>
+
+<div class="hero-wrap hero-bread">
+    <div class="profile-card">
+        {% if user.avatar.url %}
+        <img src="{{user.avatar.url}}" alt="Profile Picture" class="avatar">
+        {% else %}
+        <img src="{% static 'images/avatar.png' %}" alt="Profile Picture" class="avatar" style="border: 10px solid black">
+        {% endif %}
+        <h1>{{user.get_full_name}}</h1>
+        <span>{{user.email}}</span>
+        <p>{{user.bio}}</p>
+    </div>
+    <div class="container">
+        
+        
+        {% if order %}
+        <section class="ftco-section ftco-cart">
+			<div class="container">
+                <h2>Products in the Cart</h2>
+				<div class="row">
+    			<div class="col-md-12 ftco-animate">
+    				<div class="cart-list">
+	    				<table class="table">
+						    <thead class="thead-primary">
+						      <tr class="text-center">
+						        <th>&nbsp;</th>
+						        <th>&nbsp;</th>
+						        <th>Product</th>
+						        <th>Price</th>
+						        <th>Quantity</th>
+						        <th>Total</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+								{% for product in order.items.all %}
+						      <tr class="text-center">
+						        <td class="product-remove"><a href="{{product.item.remove_from_cart}}"><span class="ion-ios-close"></span></a></td>
+						        
+						        <td class="image-prod"><div class="img" style="background-image:url({{ product.item.image.url }});"></div></td>
+						        
+						        <td class="product-name">
+						        	<h3>{{ product.item.title }}</h3>
+						        	<p>{{ product.item.description|truncatechars:100 }}</p>
+						        </td>
+						        
+						        <td class="price">
+									{% if product.item.discount_price %}
+									<span class="price-sale">${{product.item.discount_price}}</span>
+									{% else %}
+									<span class="mr-2 price-sale">${{product.item.price}}</span>
+									{% endif %}
+								</td>
+						        
+						        <td class="quantity">
+						        	<div class="input-group mb-3">
+										<a href="{{ product.item.remove_single_from_cart }}" class="btn btn-default cart_btn">-</a>
+										 <input type="text" name="quantity" class="quantity form-control input-number" value="{{product.quantity}}" min="1" max="100">
+										 <a href="{{ product.item.add_to_cart }}" class="btn btn-default cart_btn">+</a>
+									</div>
+								</td>
+						        
+						        <td class="total">${{ product.get_final_price }}</td>
+							  </tr><!-- END TR-->
+							  {% endfor %}
+						    </tbody>
+						  </table>
+					  </div>
+    			</div>
+    		</div>
+    		
+			</div>
+        </section>
+        {% endif %}
+        
+        {% if ordered %}
+        <section class="ftco-section ftco-cart">
+			<div class="container">
+                <h2>Products Ordered Before</h2>
+				<div class="row">
+    			<div class="col-md-12 ftco-animate">
+    				<div class="cart-list">
+	    				<table class="table">
+						    <thead class="thead-primary">
+						      <tr class="text-center">
+						        <th>&nbsp;</th>
+						        <th>Product</th>
+						        <th>Price</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+								{% for order_product in ordered.items.all %}
+						      <tr class="text-center">
+						        
+						        <td class="image-prod"><div class="img" style="background-image:url({{ order_product.item.image.url }});"></div></td>
+						        
+						        <td class="product-name">
+						        	<h3>{{ order_product.item.title }}</h3>
+						        	<p>{{ order_product.item.description|truncatechars:100 }}</p>
+						        </td>
+						        
+						        <td class="price">
+									{% if order_product.item.discount_price %}
+									<span class="price-sale">${{order_product.item.discount_price}}</span>
+									{% else %}
+									<span class="mr-2 price-sale">${{order_product.item.price}}</span>
+									{% endif %}
+								</td>
+							  </tr><!-- END TR-->
+							  {% endfor %}
+						    </tbody>
+						  </table>
+					  </div>
+    			</div>
+    		</div>
+    		
+			</div>
+        </section>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

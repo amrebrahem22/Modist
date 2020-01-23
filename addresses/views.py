@@ -5,9 +5,16 @@ from django.contrib import messages
 from orders.models import Order
 from .models import Address, Payment
 from .forms import CheckoutForm
+from products.models import Product
 
+import random
+import string
 import stripe
 stripe.api_key = settings.STRIPE_SECRET_KEY
+
+# this method will generate a random string
+def create_ref_code():
+    return ''.join(random.choices(string.ascii_lowercase + string.digits, k=20))
 
 def is_valid_form(values):
     valid = True
@@ -194,11 +201,15 @@ class PaymentView(View):
 
             order.ordered = True
             order.payment = payment
+            order.ref_code = create_ref_code()
             order.save()
 
             order_items = order.items.all()
             order_items.update(ordered=True)
             for item in order_items:
+                qs = get_object_or_404(Product,pk=item.id)
+                qs.purchasing += int(item.quantity) or 1
+                qs.save()
                 item.save()
 
             messages.success(self.request, "Your order was successful!")

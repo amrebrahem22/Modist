@@ -4,7 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -79,7 +79,9 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  color: #777;
+  }
 
 abbr[title],
 abbr[data-original-title] {
@@ -7820,6 +7822,8 @@ h1, h2, h3, h4, h5,
       font-weight: 300;
       background: #f1b8c4; }
     .product .img-prod img {
+      height: 472px;
+      width: 100%;
       -webkit-transform: scale(1);
       -moz-transform: scale(1);
       -ms-transform: scale(1);
@@ -7829,7 +7833,8 @@ h1, h2, h3, h4, h5,
       -o-transition: all 0.3s ease;
       -webkit-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
+      transition: all 0.3s ease;
+      }
     .product .img-prod:hover img, .product .img-prod:focus img {
       -webkit-transform: scale(1.1);
       -moz-transform: scale(1.1);
@@ -8794,17 +8799,19 @@ textarea.form-control {
   padding: 0;
   margin: 0; }
   .comment-list .children {
-    padding: 50px 0 0 40px;
-    margin: 0;
+    padding: 13px 0 0 100px;
+    margin: 0 100px;
     float: left;
-    width: 100%; }
+    width: 100%;
+    background: #fcfafa;
+    }
   .comment-list li {
     padding: 0;
-    margin: 0 0 30px 0;
     float: left;
     width: 100%;
     clear: both;
-    list-style: none; }
+    list-style: none;
+    }
     .comment-list li .vcard {
       width: 80px;
       float: left; }

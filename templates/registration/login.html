@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Login {% endblock %}
+
+{% block body %}
+<style>
+    .login-container {
+        max-width: 40%;
+        margin: 30px auto
+    }
+
+    .form-header {
+        font-weight: bold;
+        color: #666;
+        text-transform: uppercase;
+        word-spacing: 6.2px;
+        margin-bottom: 22px;
+        margin-top: 30px;
+    }
+
+    .form-add-control input[type="text"],
+    .form-add-control input[type="password"] {
+        width: 100%
+    }
+</style>
+<div class="hero-wrap hero-bread" style="background-image: url('/static/images/bg_6.jpg');">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <h1 class="mb-0 bread">Login</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home</a></span>
+                    <span>Login</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="login-container">
+    <div class="container">
+        <h2 class="text-center form-header">Login</h2>
+        <form action="." class="p-5 bg-light form-add-control" method="POST">
+            {% csrf_token %}
+            {% if form.errors %}
+            <div class="alert alert-danger">
+                <p><span>ERRORS</span></p>
+                <ul style="list-style: none;">
+                    {% for key, value in form.errors.items %}
+                    <li>{{ value }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            {% if next %}
+            <div class="alert alert-danger">
+                {% if user.is_authenticated %}
+                <p>Your account doesn't have access to this page. To proceed,
+                    please login with an account that has access.</p>
+                {% else %}
+                <p>Please login to see this page.</p>
+            </div>
+            {% endif %}
+            {% endif %}
+            <div class="form-group">
+                <label for="email">
+                    Email
+                </label>
+                <input type="text" name="email" placeholder="Email Address" id="email" />
+            </div>
+            <div class="form-group">
+                <label for="password">
+                    Password
+                </label>
+                <input type="password" name="password" placeholder="Enter your Password" id="password" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Sign In" class="btn py-3 px-4 btn-primary">
+            </div>
+
+        </form>
+        <p><a href="{% url 'password_reset' %}">Forgot password?</a></p>
+    </div>
+</section>
+{% endblock %}

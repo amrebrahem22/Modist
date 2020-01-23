@@ -1,0 +1,86 @@
+[
+{
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+        "title": "How to Shop",
+        "slug": "how-to-shop",
+        "overview": "# Coming Soon\r\n\r\n``` python\r\ndef anew_method():\r\n    print('hello world')\r\n```",
+        "content": "1 .another new post coming here from Amr the web developre who created this site. another new post \r\n2. coming here from Amr the web developre \r\n- coming here from Amr the web developre \r\n- coming here from Amr the web developre \r\n- coming here from Amr the web developre \r\n### Amr Ibrahim\r\nanother new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. \r\n``` python\r\nfrom django.contrib import admin\r\nfrom .models import Post\r\n\r\nfrom .forms import PostForm\r\n\r\n@admin.register(Post)\r\nclass PostAdmin(admin.ModelAdmin):\r\n    form = PostForm\r\n    # fields = ['title', 'slug', 'overview', 'content', 'author', 'tags', 'image', 'updated',]\r\n    class Meta:\r\n        model = Post\r\n        fields = \"__all__\"\r\n# admin.site.register(Post)\r\n\r\n```\r\n\r\n**and you can go [here](https://www.google.com)**\r\n*Italic Text here*\r\n\r\n| test here",
+        "author": 1,
+        "image": "images.jpg",
+        "timestamp": "2020-01-11T07:06:12.610Z",
+        "updated": "2020-01-16T10:29:39.092Z"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+        "title": "another site post",
+        "slug": "another-site-post",
+        "overview": "another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site.",
+        "content": "another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site.",
+        "author": 1,
+        "image": "xmendarkphoenix-jean-grey-sophie-turner.jpg",
+        "timestamp": "2020-01-11T07:07:15.955Z",
+        "updated": "2020-01-16T08:58:11.987Z"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+        "title": "Third Post here",
+        "slug": "third-post-here",
+        "overview": "another new post coming here from Amr the",
+        "content": "another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site. another new post coming here from Amr the web developre who created this site.",
+        "author": 1,
+        "image": "Sophie-Turner-10.jpg",
+        "timestamp": "2020-01-11T07:08:17.169Z",
+        "updated": "2020-01-16T08:58:28.322Z"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 4,
+    "fields": {
+        "title": "Fourth Post Today For Tags",
+        "slug": "fourth-post-today-for-tags",
+        "overview": "Fourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing",
+        "content": "Fourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing Tags\r\nFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing Tags\r\n\r\n\r\nFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing TagsFourth Post Today For testing Tags",
+        "author": 1,
+        "image": "web-dev.png",
+        "timestamp": "2020-01-16T08:06:47.822Z",
+        "updated": "2020-01-16T08:59:00.726Z"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 5,
+    "fields": {
+        "title": "Adding Another one",
+        "slug": "adding-another-one",
+        "overview": "Adding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another one",
+        "content": "Adding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another oneAdding Another one",
+        "author": 1,
+        "image": "bg_2.jpg",
+        "timestamp": "2020-01-16T08:09:41.086Z",
+        "updated": "2020-01-16T08:59:35.471Z"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 6,
+    "fields": {
+        "title": "Post with Tags",
+        "slug": "post-with-tags",
+        "overview": "Post with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with Tags",
+        "content": "Post with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with Tags\r\n\r\nPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with Tags\r\n\r\nPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with TagsPost with Tags",
+        "author": 1,
+        "image": "person_1.jpg",
+        "timestamp": "2020-01-16T09:00:22.216Z",
+        "updated": "2020-01-16T09:00:22.321Z"
+    }
+}
+]

@@ -37,25 +37,42 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # AllAuth
     'django.contrib.sites',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
 
+    # Third party
+    'markdown_deux',
+    'pagedown',
+
+    # AllAuth
+    
+
     # Django Countries
     'django_countries',
+
+    'crispy_forms',
+    'taggit',
 
     # stripe
     'stripe',
 
     # My apps
+    'accounts',
     'categories',
     'products',
     'addresses',
-    'orders'
+    'orders',
+    'blog',
+    'comments',
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -68,6 +85,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'modist.urls'
+
+AUTH_USER_MODEL = 'accounts.User'
 
 TEMPLATES = [
     {
@@ -131,9 +150,19 @@ USE_L10N = True
 
 USE_TZ = True
 
-SITE_ID = 1
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'amrebrahem226@gmail.com'
+EMAIL_HOST_PASSWORD = 'Amr12141618'
+
+ACCOUNT_LOGOUT_REDIRECT_URL ='/accounts/login/'
+LOGIN_URL = '/accounts/login/'
+SIGNUP_REDIRECT_URL = '/login/'
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
+
+AUTHENTICATION_BACKENDS = ['accounts.auth.EmailBackend']
+
 
 STATIC_URL = '/static/'
 
@@ -146,9 +175,26 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+STRIPE_SECRET_KEY = "sk_test_eMPykiD7WnJiIZU9T3ag080E006btNSqyj"
+
+
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
+
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-STRIPE_SECRET_KEY = "sk_test_eMPykiD7WnJiIZU9T3ag080E006btNSqyj"
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'amrebrahem233@gmail.com'
+EMAIL_HOST_PASSWORD = 'Amr12141618'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+ADMIN = [
+    ('Amr Ibrahim', EMAIL_HOST_USER),
+]

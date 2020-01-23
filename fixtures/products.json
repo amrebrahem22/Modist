@@ -1,0 +1,81 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "title": "YOUNG WOMAN WEARING DRESS",
+        "description": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.\r\n\r\nOn her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word \"and\" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn\u2019t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.",
+        "price": 120.0,
+        "discount_price": null,
+        "image": "product_YOUNG WOMAN WEARING DRESS/product-1.jpg",
+        "slug": "young-woman-wearing-dress",
+        "timestamp": "2019-12-12T17:20:44.694Z",
+        "Updated": "2019-12-12T17:20:44.694Z",
+        "rating": 4,
+        "category": [
+            1,
+            2,
+            3
+        ],
+        "sizes": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "title": "Red Skirt 2020 New",
+        "description": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.\r\n\r\nOn her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word \"and\" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn\u2019t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.",
+        "price": 100.0,
+        "discount_price": 80.0,
+        "image": "product_Red Skirt 2020 New/product-3.jpg",
+        "slug": "red-skirt-2020-new",
+        "timestamp": "2019-12-12T17:21:59.562Z",
+        "Updated": "2019-12-12T18:35:04.248Z",
+        "rating": 5,
+        "category": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "sizes": [
+            1,
+            2,
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "title": "Red Log Dress",
+        "description": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.\r\n\r\nOn her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word \"and\" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn\u2019t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.",
+        "price": 180.0,
+        "discount_price": null,
+        "image": "product_Red Log Dress/product-6.jpg",
+        "slug": "red-log-dress",
+        "timestamp": "2019-12-12T17:23:27.799Z",
+        "Updated": "2019-12-12T17:23:27.799Z",
+        "rating": 5,
+        "category": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "sizes": [
+            1,
+            2,
+            3,
+            4
+        ]
+    }
+}
+]
