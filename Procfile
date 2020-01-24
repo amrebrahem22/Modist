@@ -1,1 +1,1 @@
-"web: gunicorn modist.wsgi" 
+web: gunicorn modist.wsgi
