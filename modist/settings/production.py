@@ -179,6 +179,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+from modist.aws.conf import *
+
 STRIPE_SECRET_KEY = "sk_test_eMPykiD7WnJiIZU9T3ag080E006btNSqyj"
 
 
