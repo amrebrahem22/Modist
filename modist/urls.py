@@ -11,7 +11,7 @@ urlpatterns = [
     # path('accounts/', include('allauth.urls')),
     path('', index, name='index'),
     path('signup/', signup, name="signup_view"),
-    path('login/', email_login_view, name="127.0.0.1:8000"),
+    path('login/', email_login_view, name="login_view"),
     path('logout/', logout_view, name="logout_redirect"),
     path('accounts/', include('django.contrib.auth.urls')),
     path('profile/', profile, name='profile'),
