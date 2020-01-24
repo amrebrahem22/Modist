@@ -22,8 +22,8 @@ def email_login_view(request):
     if request.method == "POST":
         email = request.POST['email']
         password = request.POST['password']
-        # username = get_user(email)
-        user = authenticate(email=email, password=password)
+        username = get_user(email)
+        user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
                 login(request, user)
