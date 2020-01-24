@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    # 'allauth',
-    # 'allauth.account',
-    # 'allauth.socialaccount',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 
     # Third party
     'markdown_deux',
@@ -74,6 +74,10 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
+
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "optional"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
