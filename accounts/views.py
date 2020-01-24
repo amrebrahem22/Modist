@@ -33,7 +33,7 @@ def email_login_view(request):
                 return redirect('login')
         else:
             messages.error(request, "Invalid Login.")
-            return redirect('login')
+            return redirect('login_view')
     return render(request, 'registration/login.html')
 
 def signup(request):
