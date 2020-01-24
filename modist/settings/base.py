@@ -25,7 +25,7 @@ SECRET_KEY = '(6idhge8@rs5(5)xat)sadgna$79)pku71y_rjw73!2tdz)h6p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['modist.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition

@@ -1,1 +1,9 @@
 ".py[cod]" 
+Pipfile
+Pipfile.lock
+credentials.csv
+static_root
+static_my_proj
+fixtures
+modist/settings/local.py
+modist/settings/base.py
