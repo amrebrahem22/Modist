@@ -83,13 +83,6 @@
             "index": "pypi",
             "version": "==3.0.2"
         },
-        "django-allauth": {
-            "hashes": [
-                "sha256:7ab91485b80d231da191d5c7999ba93170ef1bf14ab6487d886598a1ad03e1d8"
-            ],
-            "index": "pypi",
-            "version": "==0.41.0"
-        },
         "django-countries": {
             "hashes": [
                 "sha256:1cefad9ec804d6a0318b91c5394b5aef00336755928f44d0a6420507719d65c8",
