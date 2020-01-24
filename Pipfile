@@ -22,6 +22,8 @@ psycopg2 = "*"
 dj-database-url = "*"
 gunicorn = "*"
 boto = "*"
+boto3 = "*"
+django-storages = "*"
 
 [requires]
 python_version = "3.7"
