@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
-
+{% load static %}
 {% block body %}
-<div class="hero-wrap hero-bread" style="background-image: url('/static/images/bg_6.jpg');">
+<div class="hero-wrap hero-bread" style="background-image: url({% static 'images/bg_6.jpg' %});">
   <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-center">
       <div class="col-md-9 ftco-animate text-center">
@@ -17,15 +17,15 @@
   <main style="max-width: 60%; margin: 0 auto">
     <div class="container">
 
-    <h2>Request Refund</h2>
-    <form method="POST">
+      <h2>Request Refund</h2>
+      <form method="POST">
         {% csrf_token %}
         {{ form|crispy }}
         <button type='submit' class='btn btn-primary mt-3'>Submit</button>
-    </form>
+      </form>
 
     </div>
   </main>
-  </section>
+</section>
 
 {% endblock body %}
