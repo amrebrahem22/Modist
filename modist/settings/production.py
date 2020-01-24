@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
 
     # Third party
     'markdown_deux',
