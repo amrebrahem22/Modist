@@ -21,6 +21,7 @@ markdown = "*"
 psycopg2 = "*"
 dj-database-url = "*"
 gunicorn = "*"
+boto = "*"
 
 [requires]
 python_version = "3.7"

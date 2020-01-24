@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'markdown_deux',
     'pagedown',
 
-    # AllAuth
+    # AWS
+    'storages',
     
 
     # Django Countries
