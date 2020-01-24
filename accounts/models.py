@@ -17,7 +17,7 @@ class UserManager(BaseUserManager):
     
 
         user = self.model(
-            firsname=firstname,
+            firstname=firstname,
             lastname=lastname,
             email=self.normalize_email(email),
             bio=bio,
@@ -37,7 +37,7 @@ class UserManager(BaseUserManager):
         Creates and saves a staff user with the given email and password.
         """
         user = self.create_user(
-            firsname=firstname,
+            firstname=firstname,
             lastname=lastname,
             email=email,
             password=password,
@@ -53,7 +53,7 @@ class UserManager(BaseUserManager):
         Creates and saves a superuser with the given email and password.
         """
         user = self.create_user(
-            firsname=firstname,
+            firstname=firstname,
             lastname=lastname,
             email=email,
             password=password,
